@@ -25,7 +25,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
       lang="en"
       className={`${TextMeOne.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="font-(family-name:--font-poppins) min-h-full flex flex-col">{children}</body>
+      <body className="font-(family-name:--font-poppins) min-h-full flex flex-col overflow-hidden">{children}</body>
     </html>
   );
 }

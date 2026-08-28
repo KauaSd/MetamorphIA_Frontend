@@ -35,8 +35,8 @@ export default function FormCadastro() {
 
         <Button type="button">Cadastrar</Button>
 
-        <div className="flex flex-row items-center justify-center gap-1">
-          <p className="text-sm text-[#797979]">Já tem uma conta?</p>
+        <div className="text-sm text-[#797979] flex flex-row items-center justify-center gap-1">
+          <p>Já tem uma conta?</p>
           <Link href="/auth/login">
             <p className="cursor-pointer"> <u><b>Entre</b></u> </p>
           </Link>

@@ -36,7 +36,7 @@ export default function Auth({ children }: { children: React.ReactNode }) {
 
       <div className="relative z-10 flex min-h-screen flex-col">
         <div className="w-full px-4 py-4 sm:px-8 sm:py-8">
-          <header className="mx-auto flex min-h-11 w-full max-w-5xl items-center justify-center gap-2 rounded-[70px] bg-[#433F3F] px-4 py-1.5 text-[#FFFDFA] sm:min-h-14 sm:py-2">
+          <header className="mx-auto flex min-h-11 w-full lg:max-w-[110rem] items-center justify-center gap-2 rounded-[70px] bg-[#433F3F] px-4 py-1.5 text-[#FFFDFA] sm:min-h-14 sm:py-2">
             <img src={Logo.src} alt="" className="w-7 sm:w-11" />
             <p className={`${TextMeOne.variable} text-xl sm:text-[2rem] font-(family-name:--font-text-me-one)`}>
                 MetamorphIA
@@ -44,7 +44,7 @@ export default function Auth({ children }: { children: React.ReactNode }) {
             </header>
         </div>
 
-        <main className={`flex-1 ${poppins.variable} font-(family-name:--font-poppins)`}>
+        <main className={`flex-1 ${poppins.variable} font-(family-name:--font-poppins) overflow-hidden`}>
           {children}
         </main>
       </div>

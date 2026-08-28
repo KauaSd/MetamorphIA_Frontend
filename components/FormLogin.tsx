@@ -35,8 +35,8 @@ export default function FormLogin() {
 
         <Button type="submit">Cadastrar</Button>
 
-        <div className="flex flex-row items-center justify-center gap-1">
-            <p className="text-sm text-[#797979]"> Não tem uma conta? </p>
+        <div className="text-sm text-[#797979] flex flex-row items-center justify-center gap-1">
+            <p> Não tem uma conta? </p>
                 <Link href="/auth/cadastro">
             <p className="cursor-pointer"> <u><b>Cadastre-se</b></u> </p>
         </Link>
