@@ -35,7 +35,7 @@ export default function FormLogin() {
           </Link>
         </div>
 
-        <Button type="submit">Cadastrar</Button>
+        <Button type="submit">Entrar</Button>
 
         <div className="text-sm text-[#797979] flex flex-row items-center justify-center gap-1">
             <p> Não tem uma conta? </p>
