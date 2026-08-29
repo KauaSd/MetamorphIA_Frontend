@@ -5,6 +5,15 @@
   --foreground: #171717;
 }
 
+@keyframes caret-blink {
+  0%, 70%, 100% { opacity: 0; }
+  20%, 50% { opacity: 1; }
+}
+
+.animate-caret-blink {
+  animation: caret-blink 1s steps(1) infinite;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

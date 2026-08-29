@@ -1,7 +1,6 @@
+import FormToken from "@/components/FormToken";
 
-import FormRecuperaSenha from "@/components/FormRecuperaSenha";
-
-export default function Login() {
+export default function Token() {
   return (
     <div className="flex min-h-[calc(100dvh-5rem)] flex-col justify-center sm:min-h-[calc(100dvh-7rem)]">
       <div className="relative flex w-full items-stretch justify-center overflow-hidden px-4 sm:px-6">
@@ -10,7 +9,7 @@ export default function Login() {
           src="/encaracoladoLogin.svg"
           alt=""
         />
-        <FormRecuperaSenha/>
+        <FormToken/>
       </div>
     </div>
   );
