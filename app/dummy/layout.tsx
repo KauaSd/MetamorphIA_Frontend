@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Text_Me_One, Poppins } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const TextMeOne = Text_Me_One({
   variable: "--font-text-me-one",
@@ -10,7 +10,7 @@ const TextMeOne = Text_Me_One({
 
 const poppins = Poppins({
   variable: "--font-poppins",
- weight: ["400", "500", "600", "700"],
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
-    <html
-      lang="en"
-      className={`${TextMeOne.variable} ${poppins.variable} h-full antialiased`}
-    >
-      <body className="font-(family-name:--font-poppins) min-h-full flex flex-col overflow-hidden">{children}</body>
-    </html>
+
+<div className="relative flex min-h-dvh w-full flex-col overflow-hidden bg-[#F0F0F0]">
+        <main className={`flex min-h-0 flex-1 ${poppins.variable} font-(family-name:--font-poppins) overflow-hidden`}>
+          {children}
+        </main>
+      </div>
   );
 }
