@@ -26,8 +26,12 @@ export default function FormRecuperaSenha() {
         </div>
 
         <div className="flex gap-5">
-        <Button type="button" className="bg-[#433F3F] text-[#FFFDFA]">Voltar</Button>
-        <Button type="button">Próximo</Button>
+          <Link href="/auth/login" className="w-full">
+            <Button type="button" className="bg-[#433F3F] text-[#FFFDFA]">Voltar</Button>
+          </Link>
+          <Link href="/auth/token" className="w-full">
+            <Button type="button">Próximo</Button>
+          </Link>
       </div>
       </div>
     </form>

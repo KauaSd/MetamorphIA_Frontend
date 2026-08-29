@@ -39,12 +39,14 @@ export default function FormRecuperaSenha() {
         </div>
 
         <div className="flex gap-5">
-        <Button type="button" className="bg-[#433F3F] text-[#FFFDFA]">Voltar</Button>
-        <Button type="button">Verificar</Button>
-      </div>
-      </div>
-    </form>
-  );
+          <Link href="/auth/recuperaSenha" className="w-full">
+            <Button type="button" className="bg-[#433F3F] text-[#FFFDFA]">Voltar</Button>
+          </Link>
+          <Button type="button">Verificar</Button>
+        </div>
+        </div>
+      </form>
+    );
 }
 function Slot( props: SlotProps){
     return(

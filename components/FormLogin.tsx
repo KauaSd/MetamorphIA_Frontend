@@ -28,12 +28,14 @@ export default function FormLogin() {
         </div>
 
         <div className="flex flex-col items-end">
-          <p className="text-right text-sm text-[#797979]">
-            <u><b>Esqueci a senha</b></u>
-          </p>
+          <Link href="/auth/recuperaSenha">
+            <p className="text-right text-sm text-[#797979]">
+              <u><b>Esqueci a senha</b></u>
+            </p>
+          </Link>
         </div>
 
-        <Button type="submit">Cadastrar</Button>
+        <Button type="submit">Entrar</Button>
 
         <div className="text-sm text-[#797979] flex flex-row items-center justify-center gap-1">
             <p> Não tem uma conta? </p>
