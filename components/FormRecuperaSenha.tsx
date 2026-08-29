@@ -15,7 +15,7 @@ export default function FormRecuperaSenha() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md">
-      <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#FFFDFA] p-5 shadow-md sm:gap-6 sm:rounded-[70px] sm:p-8">
+      <div className="flex w-92 flex-col gap-6 rounded-[40px] bg-[#FFFDFA] p-5 shadow-md sm:gap-6 sm:rounded-[70px] sm:p-8">
         <div className="flex flex-col items-center gap-6">
           <p className="text-2xl text-[#433F3F] sm:text-3xl">Recuperar senha</p>
           <p className="text-sm text-[#797979] text-justify">Para redefinir sua senha, informe seu número de telefone ou e-mail cadastrado na sua conta e lhe enviaremos um link  com as instruções.</p>
@@ -26,8 +26,10 @@ export default function FormRecuperaSenha() {
         </div>
 
         <div className="flex gap-5">
-        <Button type="button" className="bg-[#433F3F] text-[#FFFDFA]">Voltar</Button>
-        <Button type="button">Próximo</Button>
+        <Link href="/auth/login">
+          <Button type="button" className="bg-[#433F3F] text-[#FFFDFA]">Voltar</Button>
+        </Link>
+          <Button type="button">Próximo</Button>
       </div>
       </div>
     </form>
