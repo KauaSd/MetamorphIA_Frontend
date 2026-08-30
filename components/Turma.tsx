@@ -10,7 +10,6 @@ interface TurmaProps{
     alunos: Aluno[]
 }
 
-
 export default function Turma( props: TurmaProps) {
     return(
         <div className="flex flex-col w-142 h-38.5 bg-[#FFFDFA] rounded-[80px] px-12 py-6 gap-3">

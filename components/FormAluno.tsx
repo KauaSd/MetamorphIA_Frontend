@@ -8,18 +8,20 @@ import { Text_Me_One } from "next/font/google";
 import { useRef } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { CheckBoxAluno } from "./CheckBoxAl";
+import  DropDown  from "./DropDown";
 
-const TextMeOne = Text_Me_One({
-  variable: "--font-text-me-one",
-  weight: "400",
-  subsets: ["latin"],
-});
-
-export default function FormRecuperaSenha() {
+interface turma{
+  value : string
+  label: string
+}
+interface turmasprops{
+  turmas: turma[]
+}
+export default function FormRecuperaSenha( { turmas } : turmasprops) {
   const inputRef = useRef<HTMLInputElement>(null);
     const [neuro, setNeuro] = useState<string[]>([])
     const [Nome, setNome] = useState("");
-    const [Idade, setIdade] = useState("");
+    const [ _ , setIdade] = useState("");
 
 
     const handleToggleNeuro = (item: string) => {
@@ -36,11 +38,11 @@ export default function FormRecuperaSenha() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md">
-      <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#F0F0F0] p-5 shadow-md sm:gap-6 sm:rounded-[70px] sm:p-8">
+      <div className="flex w-full flex-col gap-10 rounded-[40px] bg-[#F0F0F0] p-5 shadow-md sm:gap-6 sm:rounded-[70px] sm:p-8">
         <div className="flex flex-col  gap-6">
           <div className="flex items-center justify-between">
             <p
-              className={`${TextMeOne.variable} text-3xl text-[#433F3F] sm:text-4xl font-(family-name:--font-text-me-one)`}
+              className={`text-3xl text-[#433F3F] sm:text-4xl font-(family-name:--font-text-me-one)`}
             >
               Dados do Aluno
             </p>
@@ -54,7 +56,7 @@ export default function FormRecuperaSenha() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3.5">
           <Input
             type="text"
             placeholder="Nome do aluno"
@@ -68,6 +70,7 @@ export default function FormRecuperaSenha() {
               placeholder="Idade"
               min="0"
               step="1"
+              onChange={(e) => setIdade(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key.length === 1 && !/[0-9]/.test(e.key)) {
                   e.preventDefault();
@@ -129,7 +132,7 @@ export default function FormRecuperaSenha() {
                     />
               </div>
             </div>
-            {/*fazer dropdown*/}
+            <DropDown isTurma options={turmas}/>
         </div>
 
         <div className="flex gap-5">
