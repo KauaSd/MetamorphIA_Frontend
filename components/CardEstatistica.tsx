@@ -1,6 +1,6 @@
 type TipoStat = 1 | 2 | 3;
 
-interface StatCardProps {
+interface CardEstatisticaProps {
   tipo: TipoStat;
   valor: number | string;
   subtexto?: number | string;
@@ -24,7 +24,7 @@ const CONFIG_TIPOS = {
   },
 };
 
-export default function StatCard({ tipo, valor, subtexto }: StatCardProps) {
+export default function CardEstatistica({ tipo, valor, subtexto }: CardEstatisticaProps) {
   const config = CONFIG_TIPOS[tipo] || CONFIG_TIPOS[1];
 
   return (
