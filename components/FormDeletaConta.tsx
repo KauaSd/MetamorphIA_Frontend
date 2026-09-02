@@ -4,7 +4,6 @@ import { useState } from "react";
 import Button from "./Button";
 import { X } from 'lucide-react'
 export default function FormDeletaConta() {
-  const [Nome, setNome] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
