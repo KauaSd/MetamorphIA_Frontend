@@ -6,7 +6,7 @@ interface CheckBoxAlunoprops {
   onChange: (checked: boolean) => void
 }
 
-export function CheckBoxAluno({ label, checked, onChange }: CheckBoxAlunoprops) {
+export default function CheckBoxAluno({ label, checked, onChange }: CheckBoxAlunoprops) {
   return (
     <label className="inline-flex items-center gap-2.5 rounded-full bg-[#FFFFFF] px-4 py-2 cursor-pointer select-none hover:bg-[#EBEBEB] transition-colors w-42">
       <input
